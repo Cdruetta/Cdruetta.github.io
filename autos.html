@@ -16,8 +16,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
     />
-    <link rel="stylesheet" href="/bulma/css/bulma.css" />
-    <link rel="stylesheet" href="css/bulma.css" />
     <link rel="stylesheet" href="css/bulma-carousel.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
@@ -108,16 +106,39 @@
       </div>
     </main>
 
+    <footer class="bg-dark py-3">
+      <div class="container">
+        <p class="text-white">
+          © <span id="year"></span> Tu Concesionaria de Autos
+        </p>
+      </div>
+    </footer>
+
+    <!-- Botón de subir -->
+    <a
+      href="#"
+      id="scroll-to-top"
+      class="button is-primary is-rounded"
+      title="Subir"
+      aria-label="Subir"
+    >
+      <span class="icon">
+        <i class="fas fa-chevron-up"></i>
+      </span>
+    </a>
+
     <script>
       // Código para el menú burger
       document.addEventListener("DOMContentLoaded", () => {
         const burger = document.querySelector(".navbar-burger");
         const menu = document.querySelector("#navbarBasicExample");
 
-        burger.addEventListener("click", () => {
-          burger.classList.toggle("is-active");
-          menu.classList.toggle("is-active");
-        });
+        if (burger && menu) {
+          burger.addEventListener("click", () => {
+            burger.classList.toggle("is-active");
+            menu.classList.toggle("is-active");
+          });
+        }
       });
 
       // Carrusel JavaScript
@@ -144,26 +165,5 @@
         });
       });
     </script>
-
-    <footer class="bg-dark py-3">
-      <div class="container">
-        <p class="text-white">
-          © <span id="year"></span> Tu Concesionaria de Autos
-        </p>
-      </div>
-    </footer>
-
-    <!-- Botón de subir -->
-    <a
-      href="#"
-      id="scroll-to-top"
-      class="button is-primary is-rounded"
-      title="Subir"
-      aria-label="Subir"
-    >
-      <span class="icon">
-        <i class="fas fa-chevron-up"></i>
-      </span>
-    </a>
   </body>
 </html>
